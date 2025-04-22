@@ -1,0 +1,4 @@
+rootProject.name = 'SpringBoot3FeignClient'
+
+include 'feign-consumer'
+include 'feign-provider' 
