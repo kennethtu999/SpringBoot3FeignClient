@@ -16,21 +16,25 @@ public class ConsumerController {
 
     @GetMapping("/test1")
     public String testWithValues() {
+        log.info("testWithValues");
         return providerClient.testEndpoint("header-value", "param-value");
     }
 
     @GetMapping("/test2")
     public String testWithNullValues() {
+        log.info("testWithNullValues");
         return providerClient.testEndpoint(null, null);
     }
 
     @GetMapping("/test3")
     public String testWithEmptyValues() {
+        log.info("testWithEmptyValues");
         return providerClient.testEndpoint("", "");
     }
 
     @GetMapping("/test4")
     public String testHeaderHaveValueAndParamEmptyValue() {
+        log.info("testHeaderHaveValueAndParamEmptyValue");
         return providerClient.testEndpoint("header-value", "");
     }
 } 
